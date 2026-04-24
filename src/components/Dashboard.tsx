@@ -1,5 +1,6 @@
 import { signOut, User } from 'firebase/auth'
 import { auth } from '../firebase'
+import TasaEditor from './TasaEditor'
 
 const SHEET_URL = import.meta.env.VITE_GOOGLE_SHEET_URL ?? ''
 
@@ -29,9 +30,9 @@ export default function Dashboard({ user }: Props) {
           <span className="dash-badge">Operations Dashboard</span>
         </div>
 
-        <section className="sheet-section">
-          <h3 className="section-title">Operations Sheet</h3>
-          {SHEET_URL ? (
+        {SHEET_URL && (
+          <section className="sheet-section">
+            <h3 className="section-title">Operations Sheet</h3>
             <div className="sheet-wrapper">
               <iframe
                 src={SHEET_URL}
@@ -41,13 +42,10 @@ export default function Dashboard({ user }: Props) {
                 allowFullScreen
               />
             </div>
-          ) : (
-            <div className="sheet-placeholder">
-              <p>Set <code>VITE_GOOGLE_SHEET_URL</code> in your <code>.env</code> file to embed the Google Sheet here.</p>
-              <p className="placeholder-hint">Use the edit URL from your Google Sheet: https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit?usp=sharing&rm=minimal</p>
-            </div>
-          )}
-        </section>
+          </section>
+        )}
+
+        <TasaEditor />
       </main>
     </div>
   )

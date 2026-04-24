@@ -294,7 +294,7 @@ body {
 
 .sheet-iframe {
   width: 100%;
-  height: 600px;
+  height: 300px;
   display: block;
   background: #fff;
 }
@@ -354,6 +354,130 @@ body {
   background: rgba(255,92,114,0.1);
   border: 1px solid rgba(255,92,114,0.25);
 }
+
+/* ── Operations table ────────────────────────── */
+.tasa-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--xep-muted);
+  font-size: 14px;
+  padding: 16px 0;
+}
+
+.tasa-table-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--xep-border);
+}
+
+.tasa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tasa-table th {
+  background: var(--xep-dark);
+  color: var(--xep-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--xep-border);
+}
+
+.tasa-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--xep-border);
+  color: var(--xep-text);
+}
+
+.tasa-table tbody tr:last-child td { border-bottom: none; }
+
+.tasa-table tbody tr { transition: background 0.15s; }
+.tasa-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+.tasa-table tbody tr.row-success td {
+  background: rgba(0,214,143,0.06);
+}
+
+.tasa-input {
+  background: var(--xep-dark);
+  border: 1px solid var(--xep-green);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--xep-text);
+  font-family: inherit;
+  width: 120px;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,214,143,0.12);
+}
+
+.tasa-input::-webkit-inner-spin-button,
+.tasa-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.tasa-input { -moz-appearance: textfield; }
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-edit {
+  background: transparent;
+  border: 1px solid var(--xep-border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--xep-muted);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-edit:hover:not(:disabled) {
+  border-color: var(--xep-green);
+  color: var(--xep-green);
+}
+
+.btn-edit:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.btn-save {
+  background: var(--xep-green);
+  border: none;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--xep-black);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-save:hover:not(:disabled) { background: var(--xep-green-h); }
+.btn-save:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-cancel {
+  background: transparent;
+  border: 1px solid var(--xep-border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--xep-muted);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.btn-cancel:hover:not(:disabled) { border-color: var(--xep-error); color: var(--xep-error); }
+.btn-cancel:disabled { opacity: 0.5; cursor: not-allowed; }
 
 @media (max-width: 600px) {
   .login-card { padding: 36px 24px; }

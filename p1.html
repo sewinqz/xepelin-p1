@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Growth Engineer - Xepelin</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.5">
+  <style type="text/css">
+    p.p3 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823}
+    p.p4 {margin: 0.0px 0.0px 6.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823; min-height: 15.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.3px; font: 10.2px Courier; color: #2a2823; -webkit-text-stroke: #2a2823; background-color: #747065; background-color: rgba(116, 112, 101, 0.15)}
+    li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Helvetica Neue'; text-decoration: underline ; font-kerning: none}
+    span.s3 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 22.5px 0.0px; line-height: 36.0px; font: 30.0px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1"><b>Growth Engineer - Xepelin</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 15.0px 'Helvetica Neue'; color: #2a2823; -webkit-text-stroke: #2a2823"><span class="s1"><b>Prueba técnica</b></span></h3>
+<p class="p3"><span class="s1">Necesitamos que construyas una aplicación web que tenga un login básico y un embed de un google sheet que tenga ciertas funcionalidades.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Acá tienes un <a href="https://docs.google.com/spreadsheets/d/1QTZ9hB0JUyIAYZEzPh0V3uNksMXumfqLG52md9yJmgU/edit#gid=0"><span class="s2">GSheet</span></a><span class="Apple-converted-space">  de ejemplo. Copia el formato a un GSheet y construye sobre ese.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Funcionalidades del GSheet:</span></p>
+<ul class="ul1">
+  <li class="li5"><span class="s3"></span><span class="s1">Mostrar una lista de Ids con tasas, donde puedas editar una de esas tasas y esto gatille el siguiente request</span></li>
+</ul>
+<p class="p6"><span class="s1">POST</span></p>
+<p class="p6"><span class="s1">url: https://hooks.zapier.com/hooks/catch/6872019/oahrt5g/</span></p>
+<p class="p6"><span class="s1">body:<span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><span class="s1">{</span></p>
+<p class="p6"><span class="s1">'idOp' : 100, //opId</span></p>
+<p class="p6"><span class="s1">'tasa' : 1.5, //tasa modificada</span></p>
+<p class="p6"><span class="s1">'email' : 'tumail@gmail.com' //email donde se enviará el correo, agrega el tuyo para probarlo</span></p>
+<p class="p6"><span class="s1">}</span></p>
+<p class="p3"><span class="s1">Esto enviará un correo informando el cambio de tasas. El correo ya está creado, solo tienes que hacerle un request a esa ruta y si llega exitosamente, verás el correo.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+</body>
+</html>
